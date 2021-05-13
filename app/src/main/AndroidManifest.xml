@@ -23,81 +23,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ImageLabelingActivity"
-            android:label="@string/image_labeling">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="www.mlgb.band"
-                    android:pathPrefix="/image_labeling"
-                    android:scheme="http" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".TextDetectionActivity"
-            android:label="@string/text_detection">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="www.mlgb.band"
-                    android:pathPrefix="/text_detection"
-                    android:scheme="http" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".FaceDetectActivity"
-            android:label="@string/face_detection">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="www.mlgb.band"
-                    android:pathPrefix="/face_detection"
-                    android:scheme="http" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".BarcodeDetectorActivity"
-            android:label="@string/barcode_detection">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="www.mlgb.band"
-                    android:pathPrefix="/barcode"
-                    android:scheme="http" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".LandmarkDetectorActivity"
-            android:label="@string/landmark_detection">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="www.mlgb.band"
-                    android:pathPrefix="/landmark"
-                    android:scheme="http" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".LangIdActivity"
             android:label="@string/lang_detect">
             <intent-filter>
@@ -143,13 +68,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".camerax.CameraXActivity"/>
+        <activity android:name=".IDDetectorActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <!--automatically download new models on device, if app is posted to app store, the model will be predownloaded when it's installed-->
-        <!--label: image labeling-->
-        <!--ocr: text detection-->
-        <meta-data
-            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-            android:value="label,ocr,face,barcode" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 
         <!--
