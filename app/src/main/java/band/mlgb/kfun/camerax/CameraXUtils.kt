@@ -1,5 +1,6 @@
 package band.mlgb.kfun.camerax
 
+import android.util.Size
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageCapture
@@ -23,7 +24,10 @@ fun createAnalysisUseCase(
     executor: Executor,
     resultUpdater: LiveImageAnalyzer.LiveResultUpdater
 ): ImageAnalysis {
-    return ImageAnalysis.Builder().setTargetAspectRatio(AspectRatio.RATIO_4_3).build()
+    return ImageAnalysis.Builder()
+//        .setTargetAspectRatio(AspectRatio.RATIO_4_3)
+        .setTargetResolution(Size(720, 720))
+        .build()
         .also {
             it.setAnalyzer(executor, LiveImageAnalyzer(resultUpdater))
         }

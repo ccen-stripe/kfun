@@ -6,7 +6,7 @@
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
     <string name="sup">sup</string>
-    <string name="id_detection">ID Detection</string>
+    <string name="id_detection">Gelato ID Detection</string>
     <string name="kfun_deeplink">Kfun Deeplink</string>
     <string name="input_hint">type something here</string>
     <string name="lang_detect">Detect language</string>

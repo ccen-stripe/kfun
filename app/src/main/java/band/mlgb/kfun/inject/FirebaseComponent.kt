@@ -11,5 +11,4 @@ interface FirebaseComponent {
         fun inject(activity: LangIdActivity)
         fun inject(activity: SmartReplyActivity)
         fun inject(activity: TranslatorActivity)
-        fun inject(activity: IDDetectorActivity)
 }

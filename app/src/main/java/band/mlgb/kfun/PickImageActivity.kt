@@ -297,7 +297,7 @@ abstract class PickImageActivity : KFunBaseActivity(), LiveImageAnalyzer.LiveRes
         image.setImageBitmap(bitmap)
     }
 
-    abstract fun handleImage(bitmap: Bitmap)
+    open fun handleImage(bitmap: Bitmap) {}
 
     open fun handleLiveImage(image: Image, rotation: Int) {}
 
